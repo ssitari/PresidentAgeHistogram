@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presidential Ages in Office – Unit Histogram</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #edecea;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      color: #222;
+    }
+
+    /* ── Toolbar ── */
+    #toolbar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 14px;
+      height: 44px;
+      background: #fff;
+      border-bottom: 0.5px solid #ddd;
+      flex-shrink: 0;
+      z-index: 200;
+    }
+    #toolbar h1 {
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      margin-right: 2px;
+    }
+    .ctrl-group { display: flex; align-items: center; gap: 5px; }
+    .ctrl-label { font-size: 11px; color: #888; white-space: nowrap; }
+    .spacer { flex: 1; }
+
+    select, button {
+      font-family: inherit;
+      font-size: 12px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding: 3px 6px;
+      border: 0.5px solid #ccc;
+      border-radius: 4px;
+      background: #fafafa;
+      color: #222;
+      cursor: pointer;
+      height: 26px;
+    }
+    select:hover, button:hover { border-color: #999; }
+    select:focus, button:focus { outline: none; border-color: #4466cc; }
+    button:disabled { color: #bbb; cursor: default; border-color: #e5e5e5; }
+    button:disabled:hover { border-color: #e5e5e5; }
+
+    #readout {
+      font-size: 11px;
+      color: #666;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── Main split ── */
+    #main { flex: 1; display: flex; min-height: 0; }
+
+    /* ── Legend sidebar ── */
+    #sidebar {
+      width: 204px;
+      flex-shrink: 0;
+      background: #fff;
+      border-right: 0.5px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    #sidebar-head {
+      padding: 9px 12px 7px;
+      border-bottom: 0.5px solid #eee;
+      flex-shrink: 0;
+    }
+    #sidebar-head h2 {
+      font-size: 11px;
+      font-weight: 600;
+      color: #444;
+      letter-spacing: 0.02em;
+    }
+    #sidebar-head p {
+      font-size: 10px;
+      color: #999;
+      margin-top: 2px;
+      line-height: 1.35;
+    }
+    #legend-scroll { flex: 1; overflow-y: auto; overflow-x: hidden; }
+
+    .row-hit { cursor: pointer; }
+    .row-name {
+      font-size: 11px;
+      fill: #333;
+      dominant-baseline: middle;
+      pointer-events: none;
+    }
+    .row-name.is-out { fill: #aaa; }
+    .row-name.is-sel { font-weight: 600; fill: #111; }
+    .legend-brush .selection {
+      fill: #4466cc;
+      fill-opacity: 0.07;
+      stroke: #4466cc;
+      stroke-opacity: 0.45;
+      shape-rendering: crispEdges;
+    }
+    .legend-brush .handle { fill: #4466cc; fill-opacity: 0.3; }
+
+    .row-band { fill: transparent; }
+    .row-band.is-sel { fill: #f0f4f9; }
+    .row-band.is-hov { fill: #e8eef6; }
+
+    /* ── Chart ── */
+    #chart { flex: 1; min-width: 0; position: relative; }
+    #chart svg { display: block; }
+
+    .axis-line { stroke: #c9c7c2; stroke-width: 1; shape-rendering: crispEdges; }
+    .tick-mark { stroke: #d4d2ce; stroke-width: 1; shape-rendering: crispEdges; }
+    .tick-label { font-size: 10px; fill: #888; text-anchor: middle; }
+    .count-label { font-size: 10px; fill: #aaa; text-anchor: end; dominant-baseline: middle; }
+    .count-rule { stroke: #e3e1dd; stroke-width: 1; shape-rendering: crispEdges; }
+    .axis-title { font-size: 11px; fill: #666; }
+
+    .dot-ring { fill: none; stroke-width: 1; }
+    .dot-hit { fill: transparent; cursor: pointer; }
+
+    .annot {
+      font-size: 10px;
+      fill: #8a8880;
+      paint-order: stroke fill;
+      stroke: #edecea;
+      stroke-width: 3px;
+      stroke-linejoin: round;
+    }
+    .annot-line { stroke: #ccc; stroke-width: 1; stroke-dasharray: 2 2; }
+
+    /* ── Table view ── */
+    #table-wrap {
+      flex: 1;
+      min-width: 0;
+      overflow: auto;
+      background: #fff;
+      display: none;
+    }
+    table { border-collapse: collapse; font-size: 12px; width: 100%; }
+    th, td {
+      text-align: left;
+      padding: 5px 12px;
+      border-bottom: 0.5px solid #eee;
+      white-space: nowrap;
+    }
+    th {
+      position: sticky;
+      top: 0;
+      background: #fafafa;
+      font-size: 11px;
+      font-weight: 600;
+      color: #555;
+      border-bottom: 0.5px solid #ddd;
+    }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    tr.is-sel td { background: #f0f4f9; }
+    .swatch {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 2px;
+      margin-right: 6px;
+      vertical-align: baseline;
+    }
+
+    /* ── Party key ── */
+    #party-key {
+      display: none;
+      gap: 12px;
+      align-items: center;
+      padding: 6px 14px;
+      background: #fff;
+      border-top: 0.5px solid #eee;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    #party-key .key-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: #555;
+    }
+
+    /* ── Tooltip ── */
+    #tooltip {
+      position: absolute;
+      display: none;
+      pointer-events: none;
+      background: rgba(255,255,255,0.98);
+      border: 0.5px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.13);
+      padding: 8px 10px;
+      font-size: 11.5px;
+      line-height: 1.45;
+      max-width: 280px;
+      z-index: 500;
+    }
+    #tooltip .tt-name { font-weight: 600; font-size: 12.5px; margin-bottom: 1px; }
+    #tooltip .tt-party { color: #777; font-size: 10.5px; margin-bottom: 5px; }
+    #tooltip .tt-stat { color: #333; }
+    #tooltip .tt-stat b { font-variant-numeric: tabular-nums; }
+    #tooltip .tt-meta { color: #888; font-size: 10.5px; margin-top: 4px; }
+    #tooltip .tt-note {
+      color: #8a6d3b;
+      font-size: 10.5px;
+      margin-top: 4px;
+      padding-top: 4px;
+      border-top: 0.5px solid #eee;
+    }
+
+    /* Narrow windows: drop the running total, then tighten the legend column.
+       The chart panel keeps whatever is left. */
+    @media (max-width: 1080px) { #readout { display: none; } }
+    @media (max-width: 940px)  { #sidebar { width: 180px; } .ctrl-label { display: none; } }
+
+    #loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #999;
+    }
+    #loading.err { color: #b3261e; padding: 0 40px; text-align: center; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+  <div id="toolbar">
+    <h1>Presidential Ages in Office</h1>
+
+    <div class="ctrl-group">
+      <span class="ctrl-label">Color</span>
+      <select id="colorMode">
+        <option value="uniform">Uniform</option>
+        <option value="party">Party</option>
+      </select>
+    </div>
+
+    <div class="ctrl-group">
+      <span class="ctrl-label">Dots</span>
+      <select id="dotMode">
+        <option value="partial">Fill by days at age</option>
+        <option value="whole">Whole units</option>
+      </select>
+    </div>
+
+    <div class="ctrl-group">
+      <span class="ctrl-label">View</span>
+      <select id="view">
+        <option value="chart">Chart</option>
+        <option value="table">Table</option>
+      </select>
+    </div>
+
+    <button id="clear" disabled>Clear selection</button>
+
+    <div class="spacer"></div>
+    <span id="readout"></span>
+  </div>
+
+  <div id="main">
+    <div id="sidebar">
+      <div id="sidebar-head">
+        <h2>Presidents, in order</h2>
+        <p>Drag down the list to brush an era. Click a name to toggle it.</p>
+      </div>
+      <div id="legend-scroll"><svg id="legend-svg"></svg></div>
+    </div>
+
+    <div id="chart">
+      <svg id="chart-svg"></svg>
+      <div id="loading">Loading…</div>
+    </div>
+
+    <div id="table-wrap"><table id="table"></table></div>
+  </div>
+
+  <div id="party-key"></div>
+
+  <div id="tooltip"></div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

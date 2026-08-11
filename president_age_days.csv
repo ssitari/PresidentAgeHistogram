@@ -1,0 +1,283 @@
+presidency_number,person_id,name,party,age_years,days_at_this_age
+1,washington,George Washington,Unaffiliated,57,298
+1,washington,George Washington,Unaffiliated,58,365
+1,washington,George Washington,Unaffiliated,59,365
+1,washington,George Washington,Unaffiliated,60,366
+1,washington,George Washington,Unaffiliated,61,365
+1,washington,George Washington,Unaffiliated,62,365
+1,washington,George Washington,Unaffiliated,63,365
+1,washington,George Washington,Unaffiliated,64,366
+1,washington,George Washington,Unaffiliated,65,10
+2,jadams,John Adams,Federalist,61,240
+2,jadams,John Adams,Federalist,62,365
+2,jadams,John Adams,Federalist,63,365
+2,jadams,John Adams,Federalist,64,365
+2,jadams,John Adams,Federalist,65,125
+3,jefferson,Thomas Jefferson,Democratic-Republican,57,40
+3,jefferson,Thomas Jefferson,Democratic-Republican,58,365
+3,jefferson,Thomas Jefferson,Democratic-Republican,59,365
+3,jefferson,Thomas Jefferson,Democratic-Republican,60,366
+3,jefferson,Thomas Jefferson,Democratic-Republican,61,365
+3,jefferson,Thomas Jefferson,Democratic-Republican,62,365
+3,jefferson,Thomas Jefferson,Democratic-Republican,63,365
+3,jefferson,Thomas Jefferson,Democratic-Republican,64,366
+3,jefferson,Thomas Jefferson,Democratic-Republican,65,325
+4,madison,James Madison,Democratic-Republican,57,12
+4,madison,James Madison,Democratic-Republican,58,365
+4,madison,James Madison,Democratic-Republican,59,365
+4,madison,James Madison,Democratic-Republican,60,366
+4,madison,James Madison,Democratic-Republican,61,365
+4,madison,James Madison,Democratic-Republican,62,365
+4,madison,James Madison,Democratic-Republican,63,365
+4,madison,James Madison,Democratic-Republican,64,366
+4,madison,James Madison,Democratic-Republican,65,353
+5,monroe,James Monroe,Democratic-Republican,58,55
+5,monroe,James Monroe,Democratic-Republican,59,365
+5,monroe,James Monroe,Democratic-Republican,60,365
+5,monroe,James Monroe,Democratic-Republican,61,366
+5,monroe,James Monroe,Democratic-Republican,62,365
+5,monroe,James Monroe,Democratic-Republican,63,365
+5,monroe,James Monroe,Democratic-Republican,64,365
+5,monroe,James Monroe,Democratic-Republican,65,366
+5,monroe,James Monroe,Democratic-Republican,66,310
+6,jqadams,John Quincy Adams,National Republican,57,129
+6,jqadams,John Quincy Adams,National Republican,58,365
+6,jqadams,John Quincy Adams,National Republican,59,365
+6,jqadams,John Quincy Adams,National Republican,60,366
+6,jqadams,John Quincy Adams,National Republican,61,236
+7,jackson,Andrew Jackson,Democratic,61,11
+7,jackson,Andrew Jackson,Democratic,62,365
+7,jackson,Andrew Jackson,Democratic,63,365
+7,jackson,Andrew Jackson,Democratic,64,366
+7,jackson,Andrew Jackson,Democratic,65,365
+7,jackson,Andrew Jackson,Democratic,66,365
+7,jackson,Andrew Jackson,Democratic,67,365
+7,jackson,Andrew Jackson,Democratic,68,366
+7,jackson,Andrew Jackson,Democratic,69,354
+8,vanburen,Martin Van Buren,Democratic,54,276
+8,vanburen,Martin Van Buren,Democratic,55,365
+8,vanburen,Martin Van Buren,Democratic,56,365
+8,vanburen,Martin Van Buren,Democratic,57,366
+8,vanburen,Martin Van Buren,Democratic,58,89
+9,whharrison,William Henry Harrison,Whig,68,31
+10,tyler,John Tyler,Whig,51,359
+10,tyler,John Tyler,Whig,52,365
+10,tyler,John Tyler,Whig,53,366
+10,tyler,John Tyler,Whig,54,340
+11,polk,James K. Polk,Democratic,49,243
+11,polk,James K. Polk,Democratic,50,365
+11,polk,James K. Polk,Democratic,51,365
+11,polk,James K. Polk,Democratic,52,366
+11,polk,James K. Polk,Democratic,53,122
+12,taylor,Zachary Taylor,Whig,64,264
+12,taylor,Zachary Taylor,Whig,65,227
+13,fillmore,Millard Fillmore,Whig,50,182
+13,fillmore,Millard Fillmore,Whig,51,365
+13,fillmore,Millard Fillmore,Whig,52,366
+13,fillmore,Millard Fillmore,Whig,53,56
+14,pierce,Franklin Pierce,Democratic,48,264
+14,pierce,Franklin Pierce,Democratic,49,365
+14,pierce,Franklin Pierce,Democratic,50,365
+14,pierce,Franklin Pierce,Democratic,51,366
+14,pierce,Franklin Pierce,Democratic,52,101
+15,buchanan,James Buchanan,Democratic,65,50
+15,buchanan,James Buchanan,Democratic,66,365
+15,buchanan,James Buchanan,Democratic,67,365
+15,buchanan,James Buchanan,Democratic,68,366
+15,buchanan,James Buchanan,Democratic,69,315
+16,lincoln,Abraham Lincoln,Republican,52,345
+16,lincoln,Abraham Lincoln,Republican,53,365
+16,lincoln,Abraham Lincoln,Republican,54,365
+16,lincoln,Abraham Lincoln,Republican,55,366
+16,lincoln,Abraham Lincoln,Republican,56,62
+17,ajohnson,Andrew Johnson,National Union,56,258
+17,ajohnson,Andrew Johnson,National Union,57,365
+17,ajohnson,Andrew Johnson,National Union,58,365
+17,ajohnson,Andrew Johnson,National Union,59,366
+17,ajohnson,Andrew Johnson,National Union,60,65
+18,grant,Ulysses S. Grant,Republican,46,54
+18,grant,Ulysses S. Grant,Republican,47,365
+18,grant,Ulysses S. Grant,Republican,48,365
+18,grant,Ulysses S. Grant,Republican,49,366
+18,grant,Ulysses S. Grant,Republican,50,365
+18,grant,Ulysses S. Grant,Republican,51,365
+18,grant,Ulysses S. Grant,Republican,52,365
+18,grant,Ulysses S. Grant,Republican,53,366
+18,grant,Ulysses S. Grant,Republican,54,311
+19,hayes,Rutherford B. Hayes,Republican,54,214
+19,hayes,Rutherford B. Hayes,Republican,55,365
+19,hayes,Rutherford B. Hayes,Republican,56,365
+19,hayes,Rutherford B. Hayes,Republican,57,366
+19,hayes,Rutherford B. Hayes,Republican,58,151
+20,garfield,James A. Garfield,Republican,49,199
+21,arthur,Chester A. Arthur,Republican,51,16
+21,arthur,Chester A. Arthur,Republican,52,365
+21,arthur,Chester A. Arthur,Republican,53,365
+21,arthur,Chester A. Arthur,Republican,54,366
+21,arthur,Chester A. Arthur,Republican,55,150
+22,cleveland,Grover Cleveland,Democratic,47,14
+22,cleveland,Grover Cleveland,Democratic,48,365
+22,cleveland,Grover Cleveland,Democratic,49,365
+22,cleveland,Grover Cleveland,Democratic,50,366
+22,cleveland,Grover Cleveland,Democratic,51,351
+23,bharrison,Benjamin Harrison,Republican,55,169
+23,bharrison,Benjamin Harrison,Republican,56,365
+23,bharrison,Benjamin Harrison,Republican,57,365
+23,bharrison,Benjamin Harrison,Republican,58,366
+23,bharrison,Benjamin Harrison,Republican,59,196
+24,cleveland,Grover Cleveland,Democratic,55,14
+24,cleveland,Grover Cleveland,Democratic,56,365
+24,cleveland,Grover Cleveland,Democratic,57,365
+24,cleveland,Grover Cleveland,Democratic,58,366
+24,cleveland,Grover Cleveland,Democratic,59,351
+25,mckinley,William McKinley,Republican,54,331
+25,mckinley,William McKinley,Republican,55,365
+25,mckinley,William McKinley,Republican,56,365
+25,mckinley,William McKinley,Republican,57,365
+25,mckinley,William McKinley,Republican,58,228
+26,troosevelt,Theodore Roosevelt,Republican,42,43
+26,troosevelt,Theodore Roosevelt,Republican,43,365
+26,troosevelt,Theodore Roosevelt,Republican,44,365
+26,troosevelt,Theodore Roosevelt,Republican,45,366
+26,troosevelt,Theodore Roosevelt,Republican,46,365
+26,troosevelt,Theodore Roosevelt,Republican,47,365
+26,troosevelt,Theodore Roosevelt,Republican,48,365
+26,troosevelt,Theodore Roosevelt,Republican,49,366
+26,troosevelt,Theodore Roosevelt,Republican,50,128
+27,taft,William Howard Taft,Republican,51,195
+27,taft,William Howard Taft,Republican,52,365
+27,taft,William Howard Taft,Republican,53,365
+27,taft,William Howard Taft,Republican,54,366
+27,taft,William Howard Taft,Republican,55,170
+28,wilson,Woodrow Wilson,Democratic,56,299
+28,wilson,Woodrow Wilson,Democratic,57,365
+28,wilson,Woodrow Wilson,Democratic,58,365
+28,wilson,Woodrow Wilson,Democratic,59,366
+28,wilson,Woodrow Wilson,Democratic,60,365
+28,wilson,Woodrow Wilson,Democratic,61,365
+28,wilson,Woodrow Wilson,Democratic,62,365
+28,wilson,Woodrow Wilson,Democratic,63,366
+28,wilson,Woodrow Wilson,Democratic,64,66
+29,harding,Warren G. Harding,Republican,55,243
+29,harding,Warren G. Harding,Republican,56,365
+29,harding,Warren G. Harding,Republican,57,273
+30,coolidge,Calvin Coolidge,Republican,51,337
+30,coolidge,Calvin Coolidge,Republican,52,365
+30,coolidge,Calvin Coolidge,Republican,53,365
+30,coolidge,Calvin Coolidge,Republican,54,365
+30,coolidge,Calvin Coolidge,Republican,55,366
+30,coolidge,Calvin Coolidge,Republican,56,243
+31,hoover,Herbert Hoover,Republican,54,159
+31,hoover,Herbert Hoover,Republican,55,365
+31,hoover,Herbert Hoover,Republican,56,365
+31,hoover,Herbert Hoover,Republican,57,366
+31,hoover,Herbert Hoover,Republican,58,206
+32,fdr,Franklin D. Roosevelt,Democratic,51,332
+32,fdr,Franklin D. Roosevelt,Democratic,52,365
+32,fdr,Franklin D. Roosevelt,Democratic,53,365
+32,fdr,Franklin D. Roosevelt,Democratic,54,366
+32,fdr,Franklin D. Roosevelt,Democratic,55,365
+32,fdr,Franklin D. Roosevelt,Democratic,56,365
+32,fdr,Franklin D. Roosevelt,Democratic,57,365
+32,fdr,Franklin D. Roosevelt,Democratic,58,366
+32,fdr,Franklin D. Roosevelt,Democratic,59,365
+32,fdr,Franklin D. Roosevelt,Democratic,60,365
+32,fdr,Franklin D. Roosevelt,Democratic,61,365
+32,fdr,Franklin D. Roosevelt,Democratic,62,366
+32,fdr,Franklin D. Roosevelt,Democratic,63,72
+33,truman,Harry S. Truman,Democratic,60,26
+33,truman,Harry S. Truman,Democratic,61,365
+33,truman,Harry S. Truman,Democratic,62,365
+33,truman,Harry S. Truman,Democratic,63,366
+33,truman,Harry S. Truman,Democratic,64,365
+33,truman,Harry S. Truman,Democratic,65,365
+33,truman,Harry S. Truman,Democratic,66,365
+33,truman,Harry S. Truman,Democratic,67,366
+33,truman,Harry S. Truman,Democratic,68,257
+34,eisenhower,Dwight D. Eisenhower,Republican,62,267
+34,eisenhower,Dwight D. Eisenhower,Republican,63,365
+34,eisenhower,Dwight D. Eisenhower,Republican,64,365
+34,eisenhower,Dwight D. Eisenhower,Republican,65,366
+34,eisenhower,Dwight D. Eisenhower,Republican,66,365
+34,eisenhower,Dwight D. Eisenhower,Republican,67,365
+34,eisenhower,Dwight D. Eisenhower,Republican,68,365
+34,eisenhower,Dwight D. Eisenhower,Republican,69,366
+34,eisenhower,Dwight D. Eisenhower,Republican,70,98
+35,kennedy,John F. Kennedy,Democratic,43,129
+35,kennedy,John F. Kennedy,Democratic,44,365
+35,kennedy,John F. Kennedy,Democratic,45,365
+35,kennedy,John F. Kennedy,Democratic,46,177
+36,lbj,Lyndon B. Johnson,Democratic,55,279
+36,lbj,Lyndon B. Johnson,Democratic,56,365
+36,lbj,Lyndon B. Johnson,Democratic,57,365
+36,lbj,Lyndon B. Johnson,Democratic,58,365
+36,lbj,Lyndon B. Johnson,Democratic,59,366
+36,lbj,Lyndon B. Johnson,Democratic,60,146
+37,nixon,Richard Nixon,Republican,56,354
+37,nixon,Richard Nixon,Republican,57,365
+37,nixon,Richard Nixon,Republican,58,365
+37,nixon,Richard Nixon,Republican,59,366
+37,nixon,Richard Nixon,Republican,60,365
+37,nixon,Richard Nixon,Republican,61,212
+38,ford,Gerald Ford,Republican,61,339
+38,ford,Gerald Ford,Republican,62,366
+38,ford,Gerald Ford,Republican,63,190
+39,carter,Jimmy Carter,Democratic,52,254
+39,carter,Jimmy Carter,Democratic,53,365
+39,carter,Jimmy Carter,Democratic,54,365
+39,carter,Jimmy Carter,Democratic,55,366
+39,carter,Jimmy Carter,Democratic,56,111
+40,reagan,Ronald Reagan,Republican,69,17
+40,reagan,Ronald Reagan,Republican,70,365
+40,reagan,Ronald Reagan,Republican,71,365
+40,reagan,Ronald Reagan,Republican,72,365
+40,reagan,Ronald Reagan,Republican,73,366
+40,reagan,Ronald Reagan,Republican,74,365
+40,reagan,Ronald Reagan,Republican,75,365
+40,reagan,Ronald Reagan,Republican,76,365
+40,reagan,Ronald Reagan,Republican,77,349
+41,ghwbush,George H. W. Bush,Republican,64,143
+41,ghwbush,George H. W. Bush,Republican,65,365
+41,ghwbush,George H. W. Bush,Republican,66,365
+41,ghwbush,George H. W. Bush,Republican,67,366
+41,ghwbush,George H. W. Bush,Republican,68,222
+42,clinton,Bill Clinton,Democratic,46,211
+42,clinton,Bill Clinton,Democratic,47,365
+42,clinton,Bill Clinton,Democratic,48,365
+42,clinton,Bill Clinton,Democratic,49,366
+42,clinton,Bill Clinton,Democratic,50,365
+42,clinton,Bill Clinton,Democratic,51,365
+42,clinton,Bill Clinton,Democratic,52,365
+42,clinton,Bill Clinton,Democratic,53,366
+42,clinton,Bill Clinton,Democratic,54,154
+43,gwbush,George W. Bush,Republican,54,167
+43,gwbush,George W. Bush,Republican,55,365
+43,gwbush,George W. Bush,Republican,56,365
+43,gwbush,George W. Bush,Republican,57,366
+43,gwbush,George W. Bush,Republican,58,365
+43,gwbush,George W. Bush,Republican,59,365
+43,gwbush,George W. Bush,Republican,60,365
+43,gwbush,George W. Bush,Republican,61,366
+43,gwbush,George W. Bush,Republican,62,198
+44,obama,Barack Obama,Democratic,47,196
+44,obama,Barack Obama,Democratic,48,365
+44,obama,Barack Obama,Democratic,49,365
+44,obama,Barack Obama,Democratic,50,366
+44,obama,Barack Obama,Democratic,51,365
+44,obama,Barack Obama,Democratic,52,365
+44,obama,Barack Obama,Democratic,53,365
+44,obama,Barack Obama,Democratic,54,366
+44,obama,Barack Obama,Democratic,55,169
+45,trump,Donald Trump,Republican,70,145
+45,trump,Donald Trump,Republican,71,365
+45,trump,Donald Trump,Republican,72,365
+45,trump,Donald Trump,Republican,73,366
+45,trump,Donald Trump,Republican,74,220
+46,biden,Joe Biden,Democratic,78,304
+46,biden,Joe Biden,Democratic,79,365
+46,biden,Joe Biden,Democratic,80,365
+46,biden,Joe Biden,Democratic,81,366
+46,biden,Joe Biden,Democratic,82,61
+47,trump,Donald Trump,Republican,78,145
+47,trump,Donald Trump,Republican,79,365
+47,trump,Donald Trump,Republican,80,58

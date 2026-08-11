@@ -1,0 +1,48 @@
+presidency_number,person_id,name,party,birth_date,death_date,term_start,term_end,incumbent,days_in_office,age_at_start_years,age_at_start_days,age_at_start_exact,age_at_end_years,age_at_end_days,age_at_end_exact,note
+1,washington,George Washington,Unaffiliated,1732-02-22,1799-12-14,1789-04-30,1797-03-04,FALSE,2865,57,67,57.1867,65,10,65.0308,"Office vacant Mar 4 - Apr 30, 1789; government began before the president did"
+2,jadams,John Adams,Federalist,1735-10-30,1826-07-04,1797-03-04,1801-03-04,FALSE,1460,61,125,61.3455,65,125,65.3429,
+3,jefferson,Thomas Jefferson,Democratic-Republican,1743-04-13,1826-07-04,1801-03-04,1809-03-04,FALSE,2922,57,325,57.8903,65,325,65.8905,
+4,madison,James Madison,Democratic-Republican,1751-03-16,1836-06-28,1809-03-04,1817-03-04,FALSE,2922,57,353,57.967,65,353,65.9671,
+5,monroe,James Monroe,Democratic-Republican,1758-04-28,1831-07-04,1817-03-04,1825-03-04,FALSE,2922,58,310,58.8486,66,310,66.8487,
+6,jqadams,John Quincy Adams,National Republican,1767-07-11,1848-02-23,1825-03-04,1829-03-04,FALSE,1461,57,236,57.6466,61,236,61.6467,
+7,jackson,Andrew Jackson,Democratic,1767-03-15,1845-06-08,1829-03-04,1837-03-04,FALSE,2922,61,354,61.9698,69,354,69.97,
+8,vanburen,Martin Van Buren,Democratic,1782-12-05,1862-07-24,1837-03-04,1841-03-04,FALSE,1461,54,89,54.2434,58,89,58.2435,
+9,whharrison,William Henry Harrison,Whig,1773-02-09,1841-04-04,1841-03-04,1841-04-04,FALSE,31,68,23,68.0616,68,54,68.1465,Died in office after 31 days; never held office on a July 4
+10,tyler,John Tyler,Whig,1790-03-29,1862-01-18,1841-04-04,1845-03-04,FALSE,1430,51,6,51.0154,54,340,54.9306,Expelled from the Whig Party Sept 1841; unaffiliated thereafter
+11,polk,James K. Polk,Democratic,1795-11-02,1849-06-15,1845-03-04,1849-03-04,FALSE,1461,49,122,49.3343,53,122,53.3344,
+12,taylor,Zachary Taylor,Whig,1784-11-24,1850-07-09,1849-03-05,1850-07-09,FALSE,491,64,101,64.2751,65,227,65.6194,"Sworn Mar 5 (Mar 4 was a Sunday); died July 9, 1850, five days after his only July 4 in office"
+13,fillmore,Millard Fillmore,Whig,1800-01-07,1874-03-08,1850-07-09,1853-03-04,FALSE,969,50,183,50.5007,53,56,53.1537,
+14,pierce,Franklin Pierce,Democratic,1804-11-23,1869-10-08,1853-03-04,1857-03-04,FALSE,1461,48,101,48.2775,52,101,52.2776,
+15,buchanan,James Buchanan,Democratic,1791-04-23,1868-06-01,1857-03-04,1861-03-04,FALSE,1461,65,315,65.8631,69,315,69.8632,
+16,lincoln,Abraham Lincoln,Republican,1809-02-12,1865-04-15,1861-03-04,1865-04-15,FALSE,1503,52,20,52.0558,56,62,56.1709,Assassinated in office
+17,ajohnson,Andrew Johnson,National Union,1808-12-29,1875-07-31,1865-04-15,1869-03-04,FALSE,1419,56,107,56.2941,60,65,60.1792,Elected as a Democrat on the National Union ticket
+18,grant,Ulysses S. Grant,Republican,1822-04-27,1885-07-23,1869-03-04,1877-03-04,FALSE,2922,46,311,46.8538,54,311,54.854,
+19,hayes,Rutherford B. Hayes,Republican,1822-10-04,1893-01-17,1877-03-04,1881-03-04,FALSE,1461,54,151,54.4159,58,151,58.416,"Took the oath privately Mar 3, 1877; public ceremony Mar 5"
+20,garfield,James A. Garfield,Republican,1831-11-19,1881-09-19,1881-03-04,1881-09-19,FALSE,199,49,105,49.2905,49,304,49.8354,"Shot July 2, 1881; in office but incapacitated on July 4; died Sept 19"
+21,arthur,Chester A. Arthur,Republican,1829-10-05,1886-11-18,1881-09-19,1885-03-04,FALSE,1262,51,349,51.9573,55,150,55.4125,
+22,cleveland,Grover Cleveland,Democratic,1837-03-18,1908-06-24,1885-03-04,1889-03-04,FALSE,1461,47,351,47.9627,51,351,51.9627,First of two non-consecutive terms
+23,bharrison,Benjamin Harrison,Republican,1833-08-20,1901-03-13,1889-03-04,1893-03-04,FALSE,1461,55,196,55.5384,59,196,59.5385,
+24,cleveland,Grover Cleveland,Democratic,1837-03-18,1908-06-24,1893-03-04,1897-03-04,FALSE,1461,55,351,55.9628,59,351,59.9629,Second of two non-consecutive terms
+25,mckinley,William McKinley,Republican,1843-01-29,1901-09-14,1897-03-04,1901-09-14,FALSE,1654,54,34,54.0956,58,228,58.6241,Assassinated in office
+26,troosevelt,Theodore Roosevelt,Republican,1858-10-27,1919-01-06,1901-09-14,1909-03-04,FALSE,2728,42,322,42.8811,50,128,50.3501,"Took office at 42, youngest ever; had turned 43 by his first July 4 in office"
+27,taft,William Howard Taft,Republican,1857-09-15,1930-03-08,1909-03-04,1913-03-04,FALSE,1461,51,170,51.4644,55,170,55.4645,
+28,wilson,Woodrow Wilson,Democratic,1856-12-28,1924-02-03,1913-03-04,1921-03-04,FALSE,2922,56,66,56.1791,64,66,64.1793,
+29,harding,Warren G. Harding,Republican,1865-11-02,1923-08-02,1921-03-04,1923-08-02,FALSE,881,55,122,55.3331,57,273,57.7452,Died in office
+30,coolidge,Calvin Coolidge,Republican,1872-07-04,1933-01-05,1923-08-02,1929-03-04,FALSE,2041,51,29,51.0757,56,243,56.6637,Born on July 4; the only president whose birthday coincides with the sample date
+31,hoover,Herbert Hoover,Republican,1874-08-10,1964-10-20,1929-03-04,1933-03-04,FALSE,1461,54,206,54.5637,58,206,58.5638,
+32,fdr,Franklin D. Roosevelt,Democratic,1882-01-30,1945-04-12,1933-03-04,1945-04-12,FALSE,4422,51,33,51.0893,63,72,63.1964,"Died in office; longest tenure, 12 July 4ths"
+33,truman,Harry S. Truman,Democratic,1884-05-08,1972-12-26,1945-04-12,1953-01-20,FALSE,2840,60,339,60.9266,68,257,68.7023,
+34,eisenhower,Dwight D. Eisenhower,Republican,1890-10-14,1969-03-28,1953-01-20,1961-01-20,FALSE,2922,62,98,62.2682,70,98,70.2684,
+35,kennedy,John F. Kennedy,Democratic,1917-05-29,1963-11-22,1961-01-20,1963-11-22,FALSE,1036,43,236,43.6477,46,177,46.4842,Assassinated in office
+36,lbj,Lyndon B. Johnson,Democratic,1908-08-27,1973-01-22,1963-11-22,1969-01-20,FALSE,1886,55,87,55.2373,60,146,60.401,
+37,nixon,Richard Nixon,Republican,1913-01-09,1994-04-22,1969-01-20,1974-08-09,FALSE,2027,56,11,56.0313,61,212,61.581,Resigned
+38,ford,Gerald Ford,Republican,1913-07-14,2006-12-26,1974-08-09,1977-01-20,FALSE,895,61,26,61.0718,63,190,63.5222,Never elected president or vice president
+39,carter,Jimmy Carter,Democratic,1924-10-01,2024-12-29,1977-01-20,1981-01-20,FALSE,1461,52,111,52.305,56,111,56.3051,
+40,reagan,Ronald Reagan,Republican,1911-02-06,2004-06-05,1981-01-20,1989-01-20,FALSE,2922,69,349,69.9563,77,349,77.9564,
+41,ghwbush,George H. W. Bush,Republican,1924-06-12,2018-11-30,1989-01-20,1993-01-20,FALSE,1461,64,222,64.6091,68,222,68.6092,
+42,clinton,Bill Clinton,Democratic,1946-08-19,,1993-01-20,2001-01-20,FALSE,2922,46,154,46.424,54,154,54.4241,
+43,gwbush,George W. Bush,Republican,1946-07-06,,2001-01-20,2009-01-20,FALSE,2922,54,198,54.5446,62,198,62.5447,
+44,obama,Barack Obama,Democratic,1961-08-04,,2009-01-20,2017-01-20,FALSE,2922,47,169,47.4644,55,169,55.4645,
+45,trump,Donald Trump,Republican,1946-06-14,,2017-01-20,2021-01-20,FALSE,1461,70,220,70.6051,74,220,74.6052,First of two non-consecutive terms
+46,biden,Joe Biden,Democratic,1942-11-20,,2021-01-20,2025-01-20,FALSE,1461,78,61,78.17,82,61,82.1701,
+47,trump,Donald Trump,Republican,1946-06-14,,2025-01-20,,TRUE,568,78,220,78.6053,80,58,80.1604,Second of two non-consecutive terms; incumbent
