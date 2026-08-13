@@ -52,11 +52,20 @@ rows, one per presidency.
 
 ### Color
 
-Uniform by default — the chart is one distribution, not eight series. The party
-mode uses a six-slot palette (the three single-presidency parties fold into
-"Other historical party"), checked for colorblind separation of adjacent pairs
-against this page's surface. Selection is always signalled by dimming the
-unselected, never by recoloring, so it cannot collide with a party hue.
+Party by default, on a six-slot palette (the three single-presidency parties
+fold into "Other historical party") checked for colorblind separation of
+adjacent pairs against a white surface. Switch to *Uniform* to read the chart as
+one distribution rather than six series. Selection is always signalled by
+dimming the unselected, never by recoloring, so it cannot collide with a party
+hue.
+
+### Callouts
+
+Two labels sit above the plot: the youngest and the oldest dot. Both are derived
+from the data rather than written in, so they follow if the tables change.
+`CALLOUTS` in `config.js` controls which appear — a third, `'briefest'`, marks
+the fewest days served at any one age (Washington's 10 days at 65, not
+Harrison's 31 at 68) and is off by default. An empty array removes them all.
 
 The *Table* view carries the same 45 rows as plain text — the accessible path to
 everything the tooltips say, and it responds to the same selection.

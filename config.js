@@ -60,8 +60,16 @@ export const COMBINE_NONCONSECUTIVE = true;
 //  DEFAULTS
 // ============================================================
 
-export const DEFAULT_COLOR_MODE = 'uniform'; // 'uniform' | 'party'
+export const DEFAULT_COLOR_MODE = 'party';   // 'uniform' | 'party'
 export const DEFAULT_DOT_MODE    = 'partial'; // 'whole' | 'partial'
+
+// Which extremes get a labelled callout above the plot. Each is derived from
+// the data rather than hardcoded, so they follow if the tables change.
+//   'youngest' — the leftmost dot
+//   'oldest'   — the rightmost dot
+//   'briefest' — the fewest days served at any one age
+// Drop entries to quieten the chart; an empty array removes them all.
+export const CALLOUTS = ['youngest', 'oldest'];
 
 // ============================================================
 //  COLOR

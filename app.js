@@ -9,7 +9,7 @@ import {
   DEFAULT_COLOR_MODE, DEFAULT_DOT_MODE,
   BASE_COLOR, DESELECTED_COLOR, DEEMPHASIS_OPACITY, HOVER_COLOR,
   PARTY_COLORS,
-  DOT_GAP, DOT_MIN, DOT_MAX, ROW_MIN, ROW_MAX,
+  DOT_GAP, DOT_MIN, DOT_MAX, ROW_MIN, ROW_MAX, CALLOUTS,
 } from './config.js';
 
 const TAU = Math.PI * 2;
@@ -295,12 +295,18 @@ function renderChart() {
 
   // ── Extremes, labelled above their (always short) columns ──
   const colHeight = d3.rollup(dots, v => v.length, d => d.age);
-  const briefest  = d3.least(dots, d => d.days);
-  const callouts  = [
-    { d: d3.least(dots, d => d.age),  text: d => `Youngest: ${d.person.name} at ${d.age}` },
-    { d: d3.greatest(dots, d => d.age), text: d => `Oldest: ${d.person.name} at ${d.age}` },
-    { d: briefest, text: d => `Briefest: ${d.person.name}, ${fmtInt(d.days)} days at ${d.age}` },
-  ].filter((c, i, all) => c.d && all.findIndex(o => o.d === c.d) === i);
+  const CALLOUT_DEFS = {
+    youngest: { pick: ds => d3.least(ds, d => d.age),
+                text: d => `Youngest: ${d.person.name} at ${d.age}` },
+    oldest:   { pick: ds => d3.greatest(ds, d => d.age),
+                text: d => `Oldest: ${d.person.name} at ${d.age}` },
+    briefest: { pick: ds => d3.least(ds, d => d.days),
+                text: d => `Briefest: ${d.person.name}, ${fmtInt(d.days)} days at ${d.age}` },
+  };
+  const callouts = CALLOUTS
+    .map(k => CALLOUT_DEFS[k]).filter(Boolean)
+    .map(def => ({ d: def.pick(dots), text: def.text }))
+    .filter((c, i, all) => c.d && all.findIndex(o => o.d === c.d) === i);
 
   const gAnnot = svg.append('g').attr('class', 'annots');
   const placed = [];
