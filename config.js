@@ -87,6 +87,10 @@ export const DEEMPHASIS_OPACITY = 0.35;
 // Ring drawn around dots belonging to the hovered president.
 export const HOVER_COLOR = '#1a1a1a';
 
+// How heavy that ring is, in px. The dots are ~18px across at full size, so
+// this wants to read as a deliberate outline rather than a hairline.
+export const HOVER_RING_WIDTH = 3.5;
+
 // Party fills. `match` lists the exact strings from the party column that
 // fold into this entry; anything unmatched falls through to the last entry.
 export const PARTY_COLORS = [

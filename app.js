@@ -7,7 +7,7 @@ import {
   DATA_FILE, PEOPLE_FILE, FIELDS, UNIT_LABEL, FULL_YEAR,
   COMBINE_NONCONSECUTIVE,
   DEFAULT_COLOR_MODE, DEFAULT_DOT_MODE,
-  BASE_COLOR, DESELECTED_COLOR, DEEMPHASIS_OPACITY, HOVER_COLOR,
+  BASE_COLOR, DESELECTED_COLOR, DEEMPHASIS_OPACITY, HOVER_COLOR, HOVER_RING_WIDTH,
   PARTY_COLORS,
   DOT_GAP, DOT_MIN, DOT_MAX, ROW_MIN, ROW_MAX, CALLOUTS,
 } from './config.js';
@@ -287,7 +287,7 @@ function renderChart() {
 
     dot.select('.dot-ring')
       .attr('stroke', d => state.hovered === d.key ? HOVER_COLOR : fillFor(d.person))
-      .attr('stroke-width', d => state.hovered === d.key ? 1.75 : 1)
+      .attr('stroke-width', d => state.hovered === d.key ? HOVER_RING_WIDTH : 1)
       .attr('opacity', d => state.hovered === d.key ? 1
         : (state.dotMode === 'whole' ? 0 : opacityFor(d.person) * 0.75));
   };
