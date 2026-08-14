@@ -130,3 +130,9 @@ Ages 42 and 82 exist here and nowhere in the July 4 sample: TR's 43 days at 42 i
 Change `SAMPLE_MONTH` / `SAMPLE_DAY` at the top and re-run to resample on any date —
 January 1, Inauguration Day, election day, whatever. `AS_OF` caps the incumbent's tenure
 and should be bumped when you regenerate.
+
+---
+
+## Acknowledgements
+
+Most of the code written with assistance from [Claude](https://claude.ai) (Anthropic).
