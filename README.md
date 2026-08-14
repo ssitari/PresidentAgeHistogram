@@ -3,6 +3,14 @@
 An interactive unit histogram (Wilkinson dot plot) of how old presidents were
 while they held the office, plus the four CSVs and the generator behind it.
 
+---
+
+## Live demo
+
+[View on GitHub Pages](https://ssitari.github.io/PresidentAgeHistogram/)
+
+---
+
 ## The chart
 
 `index.html` + `app.js` + `config.js`. It uses ES modules and `fetch`, so it has
