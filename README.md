@@ -85,6 +85,47 @@ constitutional ones — where a Sunday pushed the public ceremony a day later (M
 Taylor 1849, Hayes 1877, Wilson 1917, Eisenhower 1957, Reagan 1985, Obama 2013) the legal
 date is used, which matters for none of the July 4 sampling.
 
+### Sources
+
+> unitedstates/congress-legislators. *executive.json*. Public domain.
+> <https://github.com/unitedstates/congress-legislators> ·
+> <https://unitedstates.github.io/congress-legislators/executive.json>
+
+Supplies every term boundary, party and birth date. It is the same project the companion
+[Senate chart](https://github.com/ssitari/SenateAgeHistogram) uses.
+
+> Wikidata contributors. *Wikidata*. CC0.
+> <https://www.wikidata.org> — queried via
+> [SPARQL](https://query.wikidata.org), joined on presidency ordinal (P1545).
+
+Supplies death dates only, which `executive.json` does not carry. `death_date` is an
+output column; nothing in the age calculations uses it.
+
+Run `python3 build_president_ages.py --refresh` to re-download both and rebuild all four
+CSVs. Downloads cache in `data/`.
+
+### Provenance note
+
+An earlier version of the generator hard-coded every name, birth date, death date and
+term boundary by hand, from an LLM's recall rather than from any source. The values were
+very nearly right — reconciling against the sources above changed **4 of 47 presidency
+rows** — but they were unverifiable and could not be re-derived by anyone else, which is
+the actual problem. What the reconciliation found:
+
+| | Was | Now | Why |
+|---|---|---|---|
+| John Adams, birth | 1735-10-30 | 1735-10-19 | Old Style date, as the source gives it. New Style is Oct 30; the source uses O.S. here and N.S. for Washington. No effect on the July 4 sample — his birthday follows July 4 either way. |
+| Zachary Taylor, term start | 1849-03-05 | 1849-03-04 | The legal term start. The old table used the ceremony date, contradicting this README's own stated rule. Adds one day to totals. |
+| John Quincy Adams, party | National Republican | Democratic-Republican | As the source records him. Historians use both. |
+| Andrew Johnson, party | National Union | Democratic | As the source records him; consistent with the existing note that he was elected as a Democrat on the National Union ticket. |
+
+Every one of the 45 death dates was independently confirmed by Wikidata. Two party
+changes alter mark colours in the chart; both are one-line overrides in
+`build_president_ages.py` if you prefer the previous attribution.
+
+Display names (`Jimmy Carter`, not `Jimmy Earl Carter`) come from a `DISPLAY_NAMES` map
+in the generator — presentation, deliberately editorial, and separate from the data.
+
 ## presidents.csv — 47 rows
 
 One row per *presidency*, not per person. Cleveland and Trump each appear twice, so
@@ -121,7 +162,7 @@ What the sampling does:
 What the chart reads. One row per presidency × integer age, with `days_at_this_age`. No sampling at
 all, so nobody is excluded on a technicality — Harrison shows up as 31 days at 68, Garfield
 as 199 days at 49. Feed this to the same stacked histogram with bar height = days instead
-of count and you get the identical chart shape with full coverage. Totals 86,664 days
+of count and you get the identical chart shape with full coverage. Totals 86,665 days
 (237.3 years), one day short of the full span because the incumbent's current day is
 still open.
 
